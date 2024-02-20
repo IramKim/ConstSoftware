@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/estiloslab1bulma.css">
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://bulma.io">
@@ -69,12 +70,17 @@
   <body>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        ¡Hola a todos!
+      <h1 class="title is-1">
+        ¡HOLA A TODOS!
       </h1>
       <p class="subtitle">
-        Este es mi primer HTML jamás creado. Los dejo con información mia debajo de estas fotos de <strong>gatos</strong>.
-      </p><br>
+        Este es mi primer HTML jamás creado. Los dejo con información mia debajo de estas fotos de <strong>gatos</strong>. <br>
+      </p> <br>
+
+      <p class="subtitle center-text">
+        Puedes repartir <strong class="has-text-danger">20</strong> corazones entre las fotos de gatos que más te gusten.
+        </p> <br>
+
     </div>
     <div class="columns">
         <div class="column">
@@ -84,7 +90,11 @@
                     <img src="https://cdn.pixabay.com/photo/2021/02/04/21/48/cats-5982770_1280.jpg" alt="Placeholder image">
                   </figure>
                 </div>
-              </div>
+              </div> <br>
+              <button class="boton_corazon button is-warning center-image">Dar corazón</button>
+              <p class = "subtitle">
+                  Corazónes: <span class="corazon"></span>
+              </p>
         </div>
         <div class="column">
             <div class="card">
@@ -93,7 +103,11 @@
                     <img src="https://cdn.pixabay.com/photo/2023/07/15/21/17/cats-8129658_1280.jpg" alt="Placeholder image">
                   </figure>
                 </div>
-              </div>
+              </div> <br>
+              <button class="boton_corazon button is-warning center-image">Dar corazón</button>
+              <p class = "subtitle">
+                  Corazónes: <span class="corazon"></span>
+              </p>
         </div>
         <div class="column">
             <div class="card">
@@ -102,7 +116,11 @@
                     <img src="https://c.wallhere.com/photos/15/99/cat_animals_nature_feline-232787.jpg!d" alt="Placeholder image">
                   </figure>
                 </div>
-              </div>
+              </div> <br>
+              <button class="boton_corazon button is-warning center-image">Dar corazón</button>
+              <p class = "subtitle">
+                  Corazónes: <span class="corazon"></span>
+        </p>
         </div>
         <div class="column">
             <div class="card">
@@ -111,9 +129,78 @@
                     <img src="https://c.wallhere.com/photos/69/04/1280x960_px_animals_cats-771926.jpg!d" alt="Placeholder image">
                   </figure>
                 </div>
-              </div>
+              </div> <br>
+              <button class="boton_corazon button is-warning center-image">Dar corazón</button>
+              <p class = "subtitle">
+                  Corazónes: <span class="corazon"></span>
+              </p> 
         </div>
-      </div>
+      </div> <br>
+    
+    <div class="box subtitle center-text">
+        <h2><strong>Mis Datos Personales</strong></h2>
+        <p>Nombre: Iram Kim Pichardo</p>
+        <p>Email: A01710231@tec.mx</p>
+        <p>Telefono: 442-305-9679</p>
+        <p>Matrícula: A01710231</p>
+        <h3>Cosas de mi:</h3>
+        <p>Me gusta mucho escuchar música todo el rato, salir con mis amigos y hacer ejercicio todos los días. Soy queretano y tengo  gatos y un perro. </p>
+    </div>
+    <div> <br>
+        <h2 class="subtitle"><strong>Preguntas Lab1:</strong></h2> 
+        <p><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
+        <p>Internet es la red global de computadoras interconectadas. Es decir, la infraestructura. Mientras que WWW es un sistema de información para proporcionar acceso a la información como paginas web.</p><br>
+        <p><strong>¿Cuáles son las partes de un URL?</strong></p>
+        <p>Protocol: EL protocolo de comunicación, este genera un request a un servidor que responde con algún resource. Ejemplos: HTTP, HTTPS (versión segura), FTP (para transferencia de archivos entre clientes y un servidor en una red), SMTP (transmisión por mail).</p>
+        <p>Domain: El nombre del dominio, es decir, la dirección de la página web. Ejemplo: www.google.com</p>
+        <p>Path: La ruta del recurso que se quiere obtener. Ejemplo: /search?q=hola</p>
+        <p>Query: Los parámetros que se le pasan al servidor. Ejemplo: ?q=hola</p><br>
+        <p><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong> </p>
+        <p>GET = Leer </p>
+        <p>HEAD = Similar al GET, peror devuelve los encabezados </p>
+        <p>PUT = Actualizar </p>
+        <p>PATCH = Actualizar parcialmente </p>
+        <p>POST = Subir </p>
+        <p>DELETE = Eliminar</p><br>
+        <p><strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</strong></p>
+        <p>Se debe utilizar el método POST, ya que este método envía los datos al servidor para que sean procesados. </p><br>
+        <p><strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong></p>
+        <p>Se utiliza el método GET, ya que las solicitudes GET solo deben recuperar datos.</p><br>
+        <p><strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong></p>
+        <p>Significa que la solicitud fue exitosa. No ocurrió ningún error.</p><br>
+        <p><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></p>
+        <p>Si ya que este error significa que el recurso no fue encontrado en el servidor. </p><br>
+        <p><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong></p>
+        <p>Si, ya que este error significa que hubo un error interno en el servidor. </p><br>
+        <p><strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></p>
+        <p>Significa que el atributo ya no es parte de la especificación de HTML. Por ejemplo: font, center, big, strike, tt, frame, dir.</p><br>
+        <p><strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></p>
+        <p>HTML5 tiene un mejor soporte para multimedia, tiene una mejor semántica, tiene una mejor conectividad y una mejor experiencia de usuario.<br>
+        <p><strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></p>
+        <p>Desde el encabezado de columna y fila, celdas, bordes,fondo, orden de filtrado,espaciado, color,etc. </p><br>
+        <p><strong>¿Cuáles son los principales controles de una forma HTML5?</strong></p>
+        <p>Input, select, textarea, button, fieldset, label, legend, datalist, output.</p><br>
+        <p><strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</strong></p>
+        <p>Para Google Chrome, este tiene un soporte de 100% HTML5.</p><br>
+        <p><strong>¿Cuál es el ciclo de vida de los sistemas de información?</strong></p>
+        <p>Se refiere a las etapas del sistema desde su concepción hasta su desactivación.</p><br>
+        <p><strong>¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></p>
+        <p>Se refiere al proceso especifico mediante el cual se desarrolla un sistema. Por ejemplo: el análisis, diseño, implementación, pruebas, etc.</p><br><br>
+        <h2 class="subtitle"><strong>Preguntas Lab3:</strong></h2>
+        <p><strong>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? </strong></p>
+        <p>Este puede ser usado para darle prioridad a una regla de estilo y en situaciones donde sea no haya manera de lograr un efecto deseado.</p><br>
+        <p><strong>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</strong></p>
+        <p>Porque esta puede entorpecer la claridad y legibilidad de las palabras si no se selecciona un color conveniente.</p><br>
+        <p><strong>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</strong></p>
+        <p>Depende de la situación, pero generalmente se recomienda usar % para tamaños de letra, px para tamaños de caja y pt para tamaños de impresión, ya que no es común para diseño web.</p><br>
+        <p><strong>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</strong></p>
+        <p>Porque reduce el tiempo de carga de la página y el tamaño del archivo.</p><br>
+    </div>
+
+<footer>
+<p>Editor utilizado: Visual Studio Code. https://code.visualstudio.com/</p>
+</footer>
   </section>
   </body>
+  <script src="js/poe.js"></script>
 </html>
