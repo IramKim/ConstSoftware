@@ -1,16 +1,3 @@
-const express = require('express');
-const app = express();
-
-//Middleware
-app.use((request, response, next) => {
-    console.log('Middleware!');
-    next(); //Le permite a la petición avanzar hacia el siguiente middleware
-});
-
-app.use((request, response, next) => {
-    console.log('Otro middleware!');
-    response.send('¡Hola mundo!'); //Manda la respuesta
-});
 
 let contador_corazones = 0;
 
@@ -116,7 +103,3 @@ const num_5 = (numeros) => {
     let espacioResultado4 = document.getElementById("resultado3");
     espacioResultado4.textContent = resultado;
 }
-
-//servidor
-
-app.listen(3000);

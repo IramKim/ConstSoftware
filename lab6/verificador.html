@@ -2,22 +2,58 @@
 <html>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link rel="stylesheet" href="lab6\estilosverificador.css"> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="C:\Users\user\ConstSoftware\lab6\estilosverificador.css"> 
 
     <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Verificador de Contraseñas</title>
     </head>
 
     <body>
-        <h1 class ="centrado-completo">
-            Inicio de Sesión
+        <img class="logo center-image" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Logo_del_ITESM.svg">
+        <h1 class ="center-text">
+            Registrar Cuenta
         </h1>
 
-
+    <div class = "container">
+            <div class="row">
+                <div class="input-field col s8 offset-s2">
+                  <i class="material-icons prefix">email</i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">Correo Electronico</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s8 offset-s2">
+                  <i class="material-icons prefix">enhanced_encryption</i>
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Contraseña</label>
+                </div>
+                <a class="btn-floating btn-medium waves-effect waves-light color-tec" onclick="MostrarPassword('password','icon1')"><i id="icon1" class="material-icons">remove_red_eye</i></a>
+            </div>
+            <div class="row">
+                <div class="input-field col s8 offset-s2">
+                  <i class="material-icons prefix">enhanced_encryption</i>
+                  <input id="confirmar" type="password" class="validate">
+                  <label for="confirmar">Confirmar Contraseña</label>
+                </div>
+                <a class="btn-floating btn-medium waves-effect waves-light color-tec" onclick="MostrarPassword('confirmar','icon2')"><i id="icon2" class="material-icons">remove_red_eye</i></a>
+            </div>
+        
+            <div class="row center-align">
+            <button class="btn waves-effect waves-light color-tec" type="submit" name="action" onclick="ValidarPassword()">Continuar
+                <i class="material-icons right">send</i>
+                </button>    
+            </div>
+        </div>
+    
+    <div class = "section">
+    <button id = "BotonFont" class="btn waves-effect waves-light boton-inferior teal darken-1" type="submit" onclick="CambiarFuente()" name="action">cambiar fuente</button>
+    </div>
 
     </body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="verif.js"></script>
 </html>
