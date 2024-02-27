@@ -1,0 +1,22 @@
+{
+  "name": "constsoftware",
+  "version": "1.0.0",
+  "description": "Proyecto express ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IramKim/ConstSoftware.git"
+  },
+  "author": "Iram Kim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IramKim/ConstSoftware/issues"
+  },
+  "homepage": "https://github.com/IramKim/ConstSoftware#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
