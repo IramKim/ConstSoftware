@@ -1,3 +1,4 @@
+
 //fs es el módulo que contiene las funciones para manipular archivos
 
 const filesystem = require('fs');
@@ -24,11 +25,13 @@ console.log('En donde se ejecuta esta línea?');
 //Se importa el módulo http
 const http = require('http');
 
-const server = http.createServer((req, res) => {
+    const server = http.createServer((req, res) => {
     console.log(request.url); //Se imprime la url que se está solicitando
     response.setHeader('Content-Type', 'text/html'); //Se establece el tipo de contenido	
     response.write("hola");
     response.end(); //Se termina la respuesta
 });
 
-server.listen(3000); //Se pone a escuchar el servidor en el puerto 3000
+
+
+http.listen(3000); //Se pone a escuchar el servidor en el puerto 3000

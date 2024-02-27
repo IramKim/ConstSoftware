@@ -1,0 +1,12 @@
+.center-text {
+    text-align: center;
+}
+
+.centrado-completo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
