@@ -1,0 +1,2 @@
+Hola!, este es un archivo de texto que esta siendo leyendo dentro de la terminal. 
+Podemos utilizar node.js para leer diferentes textos cuando queramos.
