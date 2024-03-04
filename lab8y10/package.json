@@ -1,0 +1,19 @@
+{
+  "name": "lab8y10",
+  "version": "1.0.0",
+  "description": "lab11",
+  "main": "lab1app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon lab1app.js"
+  },
+  "author": "Iram Kim Pichardo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.3"
+  }
+}
