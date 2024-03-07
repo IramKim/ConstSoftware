@@ -7,6 +7,8 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 const misRutas = require('./routes/gatos.routes');
+
+//Middleware
 app.use('/', misRutas);
 
 app.use(express.static(path.join(__dirname, 'public')));

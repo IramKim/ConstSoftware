@@ -1,0 +1,18 @@
+<%- include('includes/head.ejs') %>
+
+<h2 class="title">Crear un nuevo gato</h2>
+<form action="/gatos" method="POST">
+    <label class="label" for="nombre">Nombre</label>
+    <input class="input text" id="nombre" name="nombre">
+    <label class="label" for="nivel">Nivel</label>
+    <input type="number" value="1" class="input text" id="nivel" name="nivel">
+    <label class="label" for="imagen">Imagen</label>
+    <input class="input text" id="imagen" name="imagen">
+    <br><br>
+    <input class="button is-success" type="submit" value="Crear">
+</form>
+
+<footer>
+    <%- include('includes/footer.ejs') %>
+</footer>
+

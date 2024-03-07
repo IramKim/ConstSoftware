@@ -1,0 +1,34 @@
+<%- include('includes/head.ejs') %>
+
+
+<h2 class="title">Tus Gatos</h2>
+<div class="columns">
+    
+<% for (let gato of gatos) { %>
+    <div class="column">
+        <div class="card">
+            <div class="card-image">
+            <figure class="image is-4by3">
+                <img id="imagen_gato" src="<%= gato.imagen %>" alt="Imagen de <%= gato.nombre %>">
+            </figure>
+            </div>
+            <div class="card-content">
+            <div class="media">
+                <div class="media-left">
+                <figure class="image is-48x48">
+                    <img src="<%= gato.imagen %>" alt="Imagen de <%= gato.nombre %>">
+                </figure>
+                </div>
+                <div class="media-content">
+                <p class="title is-4"><%= gato.nombre %></p>
+                <p class="subtitle is-6">@<%= gato.nombre %> Lvl: <span id="nivel_gato"><%= gato.nivel %></span></p>
+                </div>
+            </div>
+        
+            <div class="content">
+                Vida: <span id="vida_barbaro"><%= gato.nivel %></span> <br>
+            </div>
+            </div>
+        </div>
+    </div>
+<% } %>
