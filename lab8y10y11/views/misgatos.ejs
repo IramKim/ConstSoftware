@@ -1,4 +1,4 @@
-<%- include('includes/head.ejs') %>
+<%- include('includes/head.ejs', {username:username}) %>
 
 <body>
 <section class="section">
@@ -28,6 +28,12 @@
         </div>
     </div>
 <% } %>
+
+</div>
+<% if(ultimo_gato != '') { %>
+    <div>El último gato creado fue <%= ultimo_gato %>.</div>
+<% } %>
+
 
 </section>  
 </body>

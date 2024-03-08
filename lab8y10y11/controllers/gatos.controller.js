@@ -31,4 +31,3 @@ exports.get_misgatos = (request, response, next) => {
     response.render('misgatos', {gatos: Gato.fetchAll()});
 };
 
-
