@@ -1,11 +1,8 @@
 const Gato = require('../models/gato.model');
 
 exports.get_root = (request, response, next) => {
-    console.log(request.cookies);
-    console.log(request.cookies.ultimo_gato);
     response.render('home', {
-        gatos: Gato.fetchAll(),
-        ultimo_gato: request.cookies.ultimo_gato || '',
+        username: request.session.username || '',
     });
 };
 
@@ -22,7 +19,9 @@ exports.get_error = (request, response, next) => {
 };
 
 exports.get_gatos = (request, response, next) => {  
-    response.render('gatos');
+    response.render('gatos', {
+        username: request.session.username || '',
+    });
 };
 
 exports.post_gatos = (request, response, next) => { 
@@ -33,7 +32,13 @@ exports.post_gatos = (request, response, next) => {
     response.redirect('/misgatos');
 };
 
-exports.get_misgatos = (request, response, next) => {  
-    response.render('misgatos', {gatos: Gato.fetchAll()});
+exports.get_misgatos = (request, response, next) => { 
+    console.log(request.cookies);
+    console.log(request.cookies.ultimo_gato);
+    response.render('misgatos', {
+        username: request.session.username || '',
+        gatos: Gato.fetchAll(),
+        ultimo_gato: request.cookies.ultimo_gato || '',
+    });
 };
 

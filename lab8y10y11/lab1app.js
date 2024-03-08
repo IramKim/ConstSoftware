@@ -17,6 +17,10 @@ app.use(session({
 
 app.use(cookieParser());
 
+const rutasUsuarios = require('./routes/users.routes');
+app.use('/users', rutasUsuarios);
+
+
 const misRutas = require('./routes/gatos.routes');
 
 //Middleware
