@@ -2,7 +2,7 @@
 
 <body>
 <section class="section">
-<h2 class="title">Tus Gatos</h2>
+<h2 class="title center-text">Tus Gatos</h2> <br>
 <div class="columns">
     
 <% for (let gato of gatos) { %>
@@ -10,24 +10,19 @@
         <div class="card">
             <div class="card-image">
             <figure class="image is-4by3">
-                <img id="imagen_gato" src="<%= gato.imagen %>" alt="Imagen de <%= gato.nombre %>">
+                <img src="<%= gato.imagen %>" alt="Imagen de <%= gato.nombre %>">
             </figure>
             </div>
             <div class="card-content">
             <div class="media">
-                <div class="media-left">
-                <figure class="image is-48x48">
-                    <img src="<%= gato.imagen %>" alt="Imagen de <%= gato.nombre %>">
-                </figure>
-                </div>
                 <div class="media-content">
-                <p class="title is-4"><%= gato.nombre %></p>
-                <p class="subtitle is-6">@<%= gato.nombre %> Lvl: <span id="nivel_gato"><%= gato.nivel %></span></p>
+                    <p class="title is-4 center-text">
+                        <span class="has-background-warning margen"><%= gato.nombre %></span>
+                    </p>
                 </div>
             </div>
-        
-            <div class="content">
-                Vida: <span id="vida_barbaro"><%= gato.nivel %></span> <br>
+            <div class="content center-text">
+               NIVEL: <span class="has-text-weight-bold"><%= gato.nivel %></span> <br>
             </div>
             </div>
         </div>

@@ -22,7 +22,7 @@ exports.get_gatos = (request, response, next) => {
 
 exports.post_gatos = (request, response, next) => { 
     console.log(request.body);
-    const mi_gato = new Gato(request.body.nombre, request.body.imagen);
+    const mi_gato = new Gato(request.body.nombre, request.body.nivel, request.body.imagen);
     mi_gato.save();    
     response.redirect('/misgatos');
 };

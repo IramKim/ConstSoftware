@@ -13,3 +13,17 @@
     margin-bottom: 1em;
 }
 
+
+.color-naranja {
+    color: #b37121e1;
+}
+
+.input {
+    max-width: 500px; /* Adjust as needed */
+    width: 100%;
+}
+
+.margen {
+    margin: 20px;
+    padding: 10px;
+}

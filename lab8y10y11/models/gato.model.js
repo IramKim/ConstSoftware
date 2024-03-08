@@ -12,17 +12,17 @@ const gatos = [
   ];
 
 
+  
   module.exports = class Gato {
 
     //Constructor
-    constructor(mi_nombre, mi_imagen) {
+    constructor(mi_nombre, mi_nivel, mi_imagen) {
       this.nombre = mi_nombre;
-      this.nivel = 1;
+      this.nivel = mi_nivel;
       this.imagen = mi_imagen;
   }
 
     //Guardar
-
     save(){
     gatos.push(this);
     }
@@ -32,6 +32,5 @@ const gatos = [
     static fetchAll() {
       return gatos;
     }
-
   }
   
