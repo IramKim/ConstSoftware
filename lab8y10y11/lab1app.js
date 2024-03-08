@@ -6,6 +6,17 @@ const path = require('path');
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
+app.use(session({
+  secret: 'secreto que tiene que ser largo y aleatorio',
+  resave: false, //la sesion no se guarda en cada peticion, sino solo si algo cambio
+  saveUninitialized: false //para que no se guarde una sesion hasta que tengamos datos
+}));
+
+app.use(cookieParser());
+
 const misRutas = require('./routes/gatos.routes');
 
 //Middleware
@@ -15,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
+
+
 
 
 app.listen(3000, () => {

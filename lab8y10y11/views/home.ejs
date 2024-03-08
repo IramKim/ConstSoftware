@@ -1,4 +1,4 @@
-<%- include('includes/head.ejs', {username:username}) %>
+<%- include('includes/head.ejs', {username: username}) %>
 
   <body>
   <section class="section">
@@ -185,6 +185,10 @@
   <p>Ya que la retroalimentación es inmediata para el usuario, por ejemplo al ingresar datos.</p><br>
 </div>
 
+</div>
+<% if(ultimo_gato != '') { %> 
+    <div>El último gato fue: <%= ultimo_gato %>.</div>
+<% } %>
 
           
 
