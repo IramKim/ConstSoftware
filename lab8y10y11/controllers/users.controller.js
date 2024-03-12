@@ -3,6 +3,7 @@
 exports.getLogin = (request, response, next) => {
     response.render('login', {
         username: request.session.username || '',
+        registro: false,
     });
 };
 
@@ -16,3 +17,10 @@ exports.getLogout = (request, response, next) => {
         response.redirect('/users/login');
     });
 };
+
+exports.getSignup = (request, response, next) => {
+    response.render('login', {
+        username: request.session.username || '',
+        registro: true,
+    });
+}

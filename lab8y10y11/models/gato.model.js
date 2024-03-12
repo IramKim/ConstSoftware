@@ -1,17 +1,4 @@
-const gatos = [
-    {
-      nombre: "Gato dormido", 
-      nivel: 1,  
-      imagen: "https://imagenes.20minutos.es/files/image_640_360/files/fp/uploads/imagenes/2023/07/14/un-gato-durmiendo-de-lado.r_d.320-214-10000.jpeg",
-    },
-    {
-      nombre: "Gato gordo", 
-      nivel: 5, 
-      imagen: "https://www.arandovo.com/wp-content/uploads/2023/09/gato-gordo-o-con-sobrepeso.png",
-    }
-  ];
-
-
+const db = require('../util/database');
   
   module.exports = class Gato {
 
@@ -24,13 +11,24 @@ const gatos = [
 
     //Guardar
     save(){
-    gatos.push(this);
+      return db.execute('INSERT INTO gatos (nombre, nivel, imagen) VALUES (?, ?, ?)',
+      [this.nombre, this.nivel, this.imagen]);
     }
-      
 
-    //FetchAll
+
     static fetchAll() {
-      return gatos;
+      return db.execute('Select * from gatos')
     }
-  }
+    static fetch(id) {
+        if (id) {
+            return this.fetchOne(id);
+        } else {
+            return this.fetchAll();
+        }
+    }
+    static fetchOne(id) {
+        return db.execute('Select * from gatos WHERE id = ?', [id]);
+    }
+}
+//
   

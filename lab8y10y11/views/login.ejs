@@ -3,12 +3,12 @@
 <br>
 <br>
 <br>
-<h2 class="title center-text">Bienvenido</h2>
-<form class="box center-text" action="/users/login" method="POST">
+<h2 class="title center-text"><% if (registro) { %>Registro<% } else { %>Bienvenido<% } %></h2>
+<form class="box center-text" action="/users/<% if (registro) { %>signup<% } else { %>login<% } %>" method="POST">
     <label class="label" for="username">Nombre de usuario</label>
     <input class="input text" id="username" name="username">
     <label class="label" for="password">Contraseña</label>
     <input class="input text" type="password" id="password" name="password">
     <br><br>
-    <input class="button is-success" type="submit" value="Entrar">
+    <input class="button is-success" type="submit" value="<% if (registro) { %>Registrarse<% } else { %>Entrar<% } %>">
 </form>

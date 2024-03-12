@@ -4,7 +4,7 @@
 <section class="section">
 <h2 class="title center-text">Tus Gatos</h2> <br>
 <div class="columns">
-    
+
 <% for (let gato of gatos) { %>
     <div class="column">
         <div class="card">
@@ -16,13 +16,11 @@
             <div class="card-content">
             <div class="media">
                 <div class="media-content">
-                    <p class="title is-4 center-text">
-                        <span class="has-background-warning margen"><%= gato.nombre %></span>
-                    </p>
+                    <p class="title is-4 center-text"><a href="/misgatos<%= gato.ID %>"><%= gato.Nombre %></a></p>
                 </div>
             </div>
             <div class="content center-text">
-               NIVEL: <span class="has-text-weight-bold"><%= gato.nivel %></span> <br>
+               NIVEL: <span class="has-text-weight-bold"><%= gato.Nivel %></span> <br>
             </div>
             </div>
         </div>

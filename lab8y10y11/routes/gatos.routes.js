@@ -15,11 +15,16 @@ router.get ('/error', gatosController.get_error);
 
 router.get ('/gatos', gatosController.get_gatos);
 
-router.post ('/gatos', gatosController.post_gatos);
+router.post ('/misgatos', gatosController.post_gatos);
 
 router.get ('/misgatos', gatosController.get_misgatos);
 
+router.get('/misgatos:gato_id', gatosController.get_misgatos);
+
+
 module.exports = router;
+
+
 
 
 
