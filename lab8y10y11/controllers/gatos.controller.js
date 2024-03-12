@@ -22,6 +22,7 @@ exports.get_error = (request, response, next) => {
 exports.get_gatos = (request, response, next) => {  
     response.render('gatos', {
         username: request.session.username || '',
+        csrfToken: request.csrfToken(),
     });
 };
 

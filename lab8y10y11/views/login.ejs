@@ -4,9 +4,19 @@
 <br>
 <br>
 <h2 class="title center-text"><% if (registro) { %>Registro<% } else { %>Bienvenido<% } %></h2>
+<% if(error != '') { %>
+    <div class="notification is-danger">
+        <strong><%= error %></strong>
+    </div>
+<% } %>
 <form class="box center-text" action="/users/<% if (registro) { %>signup<% } else { %>login<% } %>" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
     <label class="label" for="username">Nombre de usuario</label>
     <input class="input text" id="username" name="username">
+    <% if (registro) { %>
+        <label class="label" for="nombre">Nombre completo</label>
+        <input class="input text" id="nombre" name="nombre">
+    <% } %>
     <label class="label" for="password">Contraseña</label>
     <input class="input text" type="password" id="password" name="password">
     <br><br>
