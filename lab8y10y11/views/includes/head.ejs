@@ -6,8 +6,9 @@
     <title>Mi primera pagina!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/estiloslab1bulma.css">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">  
+          <img src="/images/logo.jpg" width="80" height="10">
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -39,14 +40,14 @@
             <div class="navbar-item">
               <div class="buttons">
                 <% if (username == '') { %>
-                  <a href="/users/signup" class="button is-primary">
+                  <a href="/users/signup" class="button registro-naranja">
                       <strong>Registrarse</strong>
                   </a>
                   <a href="/users/login" class="button is-light">
                       Iniciar Sesión
                   </a>
               <% } else { %>
-                  <strong>Hola <%= username %> | &nbsp;&nbsp;</strong>
+                  <span style="margin-right: 15px;">Hola <%= username %>! </span>
                   <a href="/users/logout" class="button is-danger">
                       Salir
                   </a>

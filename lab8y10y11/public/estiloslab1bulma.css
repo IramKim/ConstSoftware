@@ -18,6 +18,10 @@
     color: #b37121e1;
 }
 
+.registro-naranja {
+    color: #b55f29e1;
+}
+
 .input {
     max-width: 500px; /* Adjust as needed */
     width: 100%;
@@ -27,3 +31,4 @@
     margin: 20px;
     padding: 10px;
 }
+

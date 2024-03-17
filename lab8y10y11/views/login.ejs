@@ -20,5 +20,8 @@
     <label class="label" for="password">Contraseña</label>
     <input class="input text" type="password" id="password" name="password">
     <br><br>
-    <input class="button is-success" type="submit" value="<% if (registro) { %>Registrarse<% } else { %>Entrar<% } %>">
+    <input 
+    class="button <% if (registro) { %>is-success is-light<% } else { %>is-warning is-light<% } %>" 
+    type="submit" 
+    value="<% if (registro) { %>Continuar<% } else { %>Entrar<% } %>">
 </form>
