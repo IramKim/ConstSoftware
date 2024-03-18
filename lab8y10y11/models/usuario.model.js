@@ -11,13 +11,23 @@ module.exports = class Usuario {
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
         return bcrypt.hash(this.password, 12)
-        .then((password_cifrado) => {
-            return db.execute('INSERT INTO usuarios (username, nombre, password) VALUES (?, ?, ?)',
-            [this.username, this.nombre, password_cifrado]);  
-        })
-        .catch((error) => {
-            console.log(error);
-            throw Error("Usuario duplicado");
+        //al registrarse se asigna el rol por default (1) al usuario. await sirve para que espere a termine la promesa primero. (siempre va con un async antes de la funcion que lo contiene)
+        .then(async (password_cifrado) => {
+            try {
+                await db.execute(
+                    `INSERT INTO usuario (username, nombre, password) 
+                    VALUES (?, ?, ?)`, 
+                    [this.username, this.nombre, password_cifrado]
+                );
+                
+                return db.execute(
+                    'INSERT INTO asigna (username, idrol) VALUES (?, 1)', 
+                    [this.username]
+                );
+            } catch(error) {
+                console.log(error);
+                throw Error('Usuario duplicado');
+            }
         });
     }
 
