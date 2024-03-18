@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mi primera pagina!</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/estiloslab1bulma.css">
+  </head>
+
     <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">  
           <img src="/images/logo.jpg" width="80" height="10">
@@ -20,19 +23,27 @@
           <div class="navbar-start">
             <a class="navbar-item" href="/">
               Home
-            </a>      
-            <a class="navbar-item" href="/basico">
-              Html Básico
-            </a>
-            <a class="navbar-item" href="/error">
-              Error 404
-            </a>
-            <a class="navbar-item" href="/gatos">
-              Adopta un Gato
-            </a>
-            <a class="navbar-item" href="/misgatos">
-              Mis Gatos
-            </a>
+            </a>  
+            
+            
+              <a class="navbar-item" href="/error">
+                Error 404
+              </a>
+              <% for (permiso of permisos) { %>
+                <% if(permiso.permiso == 'adoptar_gatos') { %>
+                <a class="navbar-item" href="/gatos">
+                  Adopta un Gato
+                </a>
+                <% } %>
+              <% } %>
+
+              <% for (permiso of permisos) { %>
+                <% if(permiso.permiso == 'ver_gatos') { %>
+                <a class="navbar-item" href="/misgatos">
+                Mis Gatos
+                </a>
+                <% } %>
+              <% } %>
             </div>
           </div>
       
@@ -57,5 +68,4 @@
           </div>
         </div>
       </nav>
-  </head>
 

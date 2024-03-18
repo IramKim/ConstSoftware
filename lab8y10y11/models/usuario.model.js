@@ -28,7 +28,7 @@ module.exports = class Usuario {
     static getPermisos(username) {
         return db.execute(`
             SELECT permiso
-            FROM permisos p, posee po, rol r, asigna a, usuario u
+            FROM permisos p, posee po, rol r, asigna a, usuarios u
             WHERE u.username = ? AND u.username = a.username AND
             a.idrol = r.idrol AND r.idrol = po.idrol AND po.idpermiso = p.idpermiso;
         `, [username]);

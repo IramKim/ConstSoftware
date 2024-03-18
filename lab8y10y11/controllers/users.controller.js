@@ -13,6 +13,7 @@ exports.getLogin = (request, response, next) => {
         registro: false,
         csrfToken: request.csrfToken(),
         error: error,
+        permisos: request.session.permisos || [],
     });
 };
 
@@ -66,6 +67,7 @@ exports.getSignup = (request, response, next) => {
         registro: true,
         csrfToken: request.csrfToken(),
         error: error,
+        permisos: request.session.permisos || [],
     });
 };
 

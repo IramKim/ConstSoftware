@@ -4,11 +4,8 @@ const Gato = require('../models/gato.model');
 exports.get_root = (request, response, next) => {
     response.render('home', {
         username: request.session.username || '',
+        permisos: request.session.permisos || [],
     });
-};
-
-exports.get_basico = (request, response, next) => {
-    response.render('basico');
 };
 
 exports.get_css = (request, response, next) => {
@@ -23,6 +20,7 @@ exports.get_gatos = (request, response, next) => {
     response.render('gatos', {
         username: request.session.username || '',
         csrfToken: request.csrfToken(),
+        permisos: request.session.permisos || [],
     });
 };
 
@@ -47,6 +45,7 @@ exports.get_misgatos = (request, response, next) => {
             gatos: rows,
             ultimo_gato: request.cookies.ultimo_gato || '',
             username: request.session.username || '',
+            permisos: request.session.permisos || [],
         });
     })
     .catch((error) => {
