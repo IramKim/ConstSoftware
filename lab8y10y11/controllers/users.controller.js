@@ -81,5 +81,7 @@ exports.postSignup = (request, response, next) => {
         })
         .catch((error) => {
             console.log(error);
+            request.session.error = 'Usuario ya existe';
+            response.redirect('/users/signup');
         });
 }
