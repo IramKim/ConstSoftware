@@ -7,15 +7,13 @@ const db = require('../util/database');
       this.nombre = mi_nombre;
       this.nivel = mi_nivel;
       this.imagen = mi_imagen;
-  }
+  } 
 
     //Guardar
     save(){
-      return db.execute('INSERT INTO gatos (nombre, nivel, imagen) VALUES (?, ?, ?)',
+      return db.execute('CALL RegistrarGato (?, ?, ?)',  
       [this.nombre, this.nivel, this.imagen]);
     }
-
-
     static fetchAll() {
       return db.execute('Select * from gatos')
     }

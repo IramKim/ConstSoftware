@@ -9,14 +9,14 @@
         <h2 class="title center-text color-naranja">ADOPTA UN GATO</h2>
         <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW82MmYwYmVpejljcWlyM2VnbGk3NHI5ZzBxMWV5MGlnZG40aHBubCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/xUA7aMynBzJ3xG4JI4/giphy.gif" alt="Animation">
       </div><br>
-<form class="center-text"  action="/misgatos" method="POST">
+<form class="center-text"  action="/gatos" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_csrf" value="<%= csrfToken %>">
     <label class="label" for="nombre">Nombre</label>
     <input class="input is-rounded text" id="nombre" name="nombre">
     <label class="label" for="nivel">Nivel</label>
     <input type="number" class="input is-rounded text" id="nivel" name="nivel">
     <label class="label" for="imagen">Imagen</label>
-    <input class="input is-rounded text" id="imagen" name="imagen">
+    <input type="file" class="input is-rounded text" id="imagen" name="imagen">
     <br><br>
     <input class="boton_corazon button is-warning" type="submit" value="Adoptar">
 </form>

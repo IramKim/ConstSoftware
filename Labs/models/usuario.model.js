@@ -15,15 +15,15 @@ module.exports = class Usuario {
         .then(async (password_cifrado) => {
             try {
                 await db.execute(
-                    `INSERT INTO usuario (username, nombre, password) 
-                    VALUES (?, ?, ?)`, 
+                    `CALL RegistrarUsuario (?, ?, ?)`, 
                     [this.username, this.nombre, password_cifrado]
                 );
                 
                 return db.execute(
-                    'INSERT INTO asigna (username, idrol) VALUES (?, 1)', 
+                    'CALL AsignaRolUsuario (?)', 
                     [this.username]
                 );
+
             } catch(error) {
                 console.log(error);
                 throw Error('Usuario duplicado');

@@ -26,19 +26,19 @@ exports.get_gatos = (request, response, next) => {
 
 exports.post_gatos = (request, response, next) => { 
     console.log(request.body);
-    const mi_gato = new Gato(request.body.nombre, request.body.nivel, request.body.imagen);
+    console.log(request.file);
+    const mi_gato = new Gato(request.body.nombre, request.body.nivel, request.file.filename);
     mi_gato.save().then(([rows,fieldData]) => {
         response.setHeader('Set-Cookie', 'ultimo_gato=' + mi_gato.nombre + '; HttpOnly');
         response.redirect('/misgatos');
-        }).catch((error) => {
-            console.log(error);
+    }).catch((error) => {
+        console.log('Error al guardar el gato', error);
     });
 };
 
 exports.get_misgatos = (request, response, next) => { 
     console.log(request.cookies);
     console.log(request.cookies.ultimo_gato);
-
     Gato.fetch(request.params.gato_id).then(([rows, fieldData]) => {
         console.log(rows);
         response.render('misgatos', {
